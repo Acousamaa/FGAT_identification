@@ -1,2 +1,2 @@
 # FGAT_identification
-a sentence-level, multi-label benchmark dataset, derived from the ATT\&amp;CK knowledge base, for both fine-grained and coarse-grained attack technique identification.
+A dataset for fine-grained attack technique identification(FGAT) and coarse-grained attack technique identification(CGAT). This dataset is a sentence-level, multi-label benchmark dataset, derived from the ATT&CK knowledge base.
