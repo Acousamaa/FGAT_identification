@@ -1,7 +1,7 @@
 dataset:
   attck_release: "Enterprise v16.1"
-  fgat_file: FGAT_identification.csv
-  tram_file: TRAM-data.csv
+  fgat_file: data/fgat_bench.csv
+  tram_file: data/tram_benchmark.csv
   target_column_fgat: sub_technology_labels
   target_column_tram: labels
   formulation: single-label multi-class

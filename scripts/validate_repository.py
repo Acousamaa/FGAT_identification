@@ -95,7 +95,7 @@ def validate_dataset(
 
 
 def validate_fgat_scalar_columns(root: Path) -> None:
-    rows = read_rows(root / "FGAT_identification.csv")
+    rows = read_rows(root / "data" / "fgat_bench.csv")
     if not rows or list(rows[0]) != FGAT_COLUMNS:
         raise AssertionError("FGAT CSV schema differs from the documented four-column schema")
     for index, row in enumerate(rows):
@@ -129,7 +129,7 @@ def main() -> None:
     report = {
         "fgat": validate_dataset(
             root,
-            "FGAT_identification.csv",
+            "data/fgat_bench.csv",
             "sub_technology_labels",
             "fgat_split.csv",
             "fgat_class_distribution.csv",
@@ -138,7 +138,7 @@ def main() -> None:
         ),
         "tram": validate_dataset(
             root,
-            "TRAM-data.csv",
+            "data/tram_benchmark.csv",
             "labels",
             "tram_split.csv",
             "tram_class_distribution.csv",

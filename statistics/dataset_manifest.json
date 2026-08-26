@@ -14,7 +14,7 @@
   "datasets": [
     {
       "dataset": "FGAT-Bench",
-      "file": "FGAT_identification.csv",
+      "file": "data/fgat_bench.csv",
       "sha256": "9a79649f35ca47ce5b06e7c780870ec97a7bd7916b0d52c1ec6b2a54687ee2b7",
       "rows": 24042,
       "classes": 656,
@@ -29,7 +29,7 @@
     },
     {
       "dataset": "TRAM",
-      "file": "TRAM-data.csv",
+      "file": "data/tram_benchmark.csv",
       "sha256": "75a16722a9396f726c1c78daccb094efc1c9880c3638a6921cd50c8c0bd6fd42",
       "rows": 11130,
       "classes": 50,

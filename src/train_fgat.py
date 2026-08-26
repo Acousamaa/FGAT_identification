@@ -80,11 +80,11 @@ def metric_dict(true_ids: np.ndarray, predicted_ids: np.ndarray) -> dict[str, fl
 
 def load_release(root: Path, dataset: str) -> tuple[pd.DataFrame, str, Path]:
     if dataset == "fgat":
-        filename = "FGAT_identification.csv"
+        filename = "data/fgat_bench.csv"
         label_column = "sub_technology_labels"
         split_path = root / "splits" / "fgat_split.csv"
     else:
-        filename = "TRAM-data.csv"
+        filename = "data/tram_benchmark.csv"
         label_column = "labels"
         split_path = root / "splits" / "tram_split.csv"
     frame = pd.read_csv(root / filename, encoding="utf-8-sig")

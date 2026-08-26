@@ -2,7 +2,7 @@
 
 ## FGAT-Bench
 
-`FGAT_identification.csv` contains 24,042 sentence-level records and four columns:
+`data/fgat_bench.csv` contains 24,042 sentence-level records and four columns:
 
 | Column | Meaning |
 |---|---|
@@ -21,7 +21,7 @@ If a sentence textually mentions multiple ATT&CK techniques, the technique selec
 
 ## TRAM
 
-`TRAM-data.csv` contains 11,130 records with columns `labels` and `text`. Each `labels` cell contains exactly one ATT&CK ID, represented using the source list syntax. The loader accepts both scalar and one-element-list forms.
+`data/tram_benchmark.csv` contains 11,130 records with columns `labels` and `text`. Each `labels` cell contains exactly one ATT&CK ID, represented using the source list syntax. The loader accepts both scalar and one-element-list forms.
 
 ## Exact split files
 

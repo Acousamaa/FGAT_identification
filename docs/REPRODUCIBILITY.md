@@ -22,7 +22,7 @@ The scalar-label conversion is idempotent, so running without `--skip-normalize`
 ## 3. Train the single-label classifier
 
 ```bash
-python train_fgat.py \
+python src/train_fgat.py \
   --dataset fgat \
   --model-checkpoint markusbayer/CySecBERT \
   --output-dir outputs/fgat-cysecbert

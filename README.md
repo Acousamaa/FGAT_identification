@@ -15,7 +15,7 @@ The split seed is `42`. Exact membership is stored in `splits/`; experiments sho
 
 ## Single-label release policy
 
-`FGAT_identification.csv` previously represented labels as Python-list strings. It has been normalized as follows:
+`data/fgat_bench.csv` previously represented labels as Python-list strings. It has been normalized as follows:
 
 - only the first item in each original label list is retained;
 - `tactic_labels`, `technique_labels`, and `sub_technology_labels` now contain scalar ATT&CK IDs;
@@ -28,8 +28,8 @@ This transformation reduced 4,900 multi-valued tactic cells and 351 multi-valued
 ## Repository layout
 
 ```text
-FGAT_identification.csv                 FGAT-Bench, normalized scalar labels
-TRAM-data.csv                           independent TRAM benchmark copy
+data/fgat_bench.csv                     FGAT-Bench, normalized scalar labels
+data/tram_benchmark.csv                 independent TRAM benchmark copy
 configs/proposed_model.yaml             proposed-model configuration
 configs/baselines.csv                   per-baseline reproducibility table
 splits/                                 exact sample-level split membership
@@ -55,7 +55,7 @@ python scripts/validate_repository.py
 Fine-tune CySecBERT on the exact FGAT split:
 
 ```bash
-python train_fgat.py \
+python src/train_fgat.py \
   --dataset fgat \
   --model-checkpoint markusbayer/CySecBERT \
   --output-dir outputs/fgat-cysecbert

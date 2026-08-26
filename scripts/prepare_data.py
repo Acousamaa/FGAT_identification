@@ -233,8 +233,8 @@ def main() -> None:
     args = parser.parse_args()
 
     root = args.repo_root.resolve()
-    fgat_path = root / "FGAT_identification.csv"
-    tram_path = root / "TRAM-data.csv"
+    fgat_path = root / "data" / "fgat_bench.csv"
+    tram_path = root / "data" / "tram_benchmark.csv"
     summary: dict[str, object] = {
         "attck_version": ATTACK_VERSION,
         "split_seed": SPLIT_SEED,
