@@ -1,0 +1,34 @@
+dataset:
+  attck_release: "Enterprise v16.1"
+  fgat_file: FGAT_identification.csv
+  tram_file: TRAM-data.csv
+  target_column_fgat: sub_technology_labels
+  target_column_tram: labels
+  formulation: single-label multi-class
+  split_ratio: [0.8, 0.1, 0.1]
+  split_seed: 42
+
+model:
+  checkpoint: markusbayer/CySecBERT
+  max_sequence_length: 256
+  output_activation: softmax
+  loss: cross_entropy
+
+training:
+  epochs: 16
+  optimizer: AdamW
+  learning_rate: 2.0e-5
+  train_batch_size: 16
+  evaluation_batch_size: 16
+  warmup_steps: 500
+  weight_decay: 0.01
+  random_seed: 42
+  mixed_precision: true
+
+feature_library:
+  attribution_method: permutation_shap
+  candidate_rule: "SHAP value > 0"
+  glove_dimension: 300
+  glove_corpus: "Common Crawl 840B"
+  fuzzy_similarity_threshold: 0.8
+  correction_confidence_threshold: 0.6

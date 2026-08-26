@@ -1,0 +1,53 @@
+{
+  "attck_version": "16.1",
+  "split_seed": 42,
+  "fgat_normalization": {
+    "rows": 24042,
+    "multi_label_cells_reduced": {
+      "tactic_labels": 4900,
+      "technique_labels": 351
+    },
+    "unique_tactics": 14,
+    "unique_techniques": 203,
+    "unique_targets": 656
+  },
+  "datasets": [
+    {
+      "dataset": "FGAT-Bench",
+      "file": "FGAT_identification.csv",
+      "sha256": "9a79649f35ca47ce5b06e7c780870ec97a7bd7916b0d52c1ec6b2a54687ee2b7",
+      "rows": 24042,
+      "classes": 656,
+      "label_column": "sub_technology_labels",
+      "split_seed": 42,
+      "split_method": "scikit-learn-compatible ShuffleSplit; 80/20 then 50/50 on the temporary split",
+      "split_counts": {
+        "train": 19233,
+        "validation": 2404,
+        "test": 2405
+      }
+    },
+    {
+      "dataset": "TRAM",
+      "file": "TRAM-data.csv",
+      "sha256": "75a16722a9396f726c1c78daccb094efc1c9880c3638a6921cd50c8c0bd6fd42",
+      "rows": 11130,
+      "classes": 50,
+      "label_column": "labels",
+      "split_seed": 42,
+      "split_method": "scikit-learn-compatible ShuffleSplit; 80/20 then 50/50 on the temporary split",
+      "split_counts": {
+        "train": 8904,
+        "validation": 1113,
+        "test": 1113
+      }
+    }
+  ],
+  "feature_library": {
+    "release_status": "Pending upload after manuscript acceptance",
+    "placeholder_files": [
+      "resources/final_feature_library.csv",
+      "resources/final_feature_library.xlsx"
+    ]
+  }
+}

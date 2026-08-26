@@ -1,0 +1,10 @@
+baseline,implementation,repository,model_or_checkpoint,preprocessing,epochs,optimizer,learning_rate,batch_size,tuning_procedure,data_augmentation,class_balancing,prompt_and_decoding
+TTPDrill,Re-implementation based on the original study,No public implementation used,BM25 ranking,POS tagging,N/A,N/A,N/A,N/A,Original-study procedure on the fixed split,None,None,N/A
+rcATT,Re-implementation based on the original study,No public implementation used,SVM,TF-IDF + Word2Vec,N/A,N/A,N/A,N/A,Original-study procedure on the fixed split,None,None,N/A
+Ex-Action,Re-implementation based on the original study,No public implementation used,Multimodal ensemble,SVO extraction + feature engineering,N/A,N/A,N/A,N/A,Original-study procedure on the fixed split,Original-study feature construction,None,N/A
+TRAM,Official implementation,https://github.com/center-for-threat-informed-defense/tram,allenai/scibert_scivocab_uncased,SciBERT tokenization,10,AdamW,2e-5,16,Fixed configuration on the released split,None,None,N/A
+AttacKG,Re-implementation based on the original study,No public implementation used,Graph alignment + pretrained NER,Regex-based IoC detection + pretrained NER,N/A,N/A,N/A,N/A,Original-study procedure on the fixed split,None,None,N/A
+Orbinato,Re-implementation based on the original study,No public implementation used,LSTM,Word-embedding input,50,Adam,1e-3,32,Fixed configuration on the released split,None,None,N/A
+ALERT,Re-implementation based on the original study,No public implementation used,allenai/scibert_scivocab_uncased,SciBERT tokenization,10,AdamW,2e-5,16,Paper-described active-learning procedure on the fixed split,None,None,N/A
+AC_MAPPER,Re-implementation based on the original study,No public implementation used,CTI-BERT,Text cleaning and normalization,6,AdamW,5e-5,16,Fixed configuration on the released split,Input augmentation enabled,Class rebalancing enabled,N/A
+Proposed framework,Reference implementation in this repository,https://github.com/Acousamaa/FGAT_identification,markusbayer/CySecBERT,Documented cleaning + CySecBERT tokenization,16,AdamW,2e-5,16,Validation weighted-F1 on the released split,None,None,N/A

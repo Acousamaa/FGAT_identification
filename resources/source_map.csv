@@ -1,0 +1,6 @@
+stage,source,attck_version,notes
+benchmark_construction,General descriptive narrative on each official Enterprise technique or sub-technique page,16.1,Sentence-level benchmark source
+technique_name_refinement,Official Technique Name or Sub-technique Name,16.1,Used to normalize and refine names
+operational_semantic_enrichment,Manually selected definitional phrases from the Description section,16.1,Stored separately as description-derived features
+tool_command_enrichment,Tool identifiers and procedural command strings from Procedure Examples,16.1,Stored separately as tool/command features
+testing,Fixed held-out FGAT-Bench split and independent TRAM dataset,16.1,Exact membership is committed under splits
